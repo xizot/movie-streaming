@@ -1,5 +1,5 @@
 # Install
-**1. cd ./template**
+**1. cd ./movie-streaming**
 
 **2. npm i**
 
