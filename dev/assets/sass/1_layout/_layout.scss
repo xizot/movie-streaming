@@ -1,0 +1,10 @@
+.l-container {
+    margin: 0 auto;
+    @include breakpoint(sp) {
+        width: 100%;
+    }
+    @include breakpoint(pc) {
+        width: $baseWidth;
+    }
+    max-width: 100%;
+}

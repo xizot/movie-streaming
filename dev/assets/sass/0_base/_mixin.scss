@@ -1,0 +1,25 @@
+//============================================
+// clearfix
+//============================================
+@mixin clear {
+    *zoom: 1;
+    &:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+// cover background
+@mixin cover-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+//font
+
+@mixin font($name: $mainFonts, $fontweight: 500, $size: 1rem) {
+    font-family: $name, sans-serif;
+    font-weight: $fontweight;
+    font-size: $size;
+}

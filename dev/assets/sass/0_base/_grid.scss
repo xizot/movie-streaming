@@ -1,0 +1,40 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    // margin-left: -$gutter/2;
+    // margin-right: -$gutter/2;
+
+    // div[class^="col-"] {
+    //     padding-left: $gutter/2;
+    //     padding-right: $gutter/2;
+    // }
+    @for $i from 1 through $col-grid {
+        .col-lg-#{$i} {
+            width: $i/12 * 100%;
+        }
+    }
+
+    @include breakpoint(pro) {
+        @for $i from 1 through $col-grid {
+            .col-md-#{$i} {
+                width: $i/12 * 100%;
+            }
+        }
+    }
+    @include breakpoint(tab) {
+        @for $i from 1 through $col-grid {
+            .col-sm-#{$i} {
+                width: $i/12 * 100%;
+            }
+        }
+    }
+
+    @include breakpoint(sp) {
+        @for $i from 1 through $col-grid {
+            .col-xs-#{$i} {
+                width: $i/12 * 100%;
+            }
+        }
+    }
+}

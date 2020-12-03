@@ -1,0 +1,55 @@
+///*------------------------------------------------------------
+//Anchor position
+//------------------------------------------------------------*/
+//.u-anchor:before{
+//	content:"";
+//	margin-top: -100px;
+//	padding-top: 100px;
+//}
+
+//------------------------------------------------------------
+// margin
+//------------------------------------------------------------
+
+//------------------------------------------------------------
+// color
+//------------------------------------------------------------
+
+//------------------------------------------------------------
+// else
+//------------------------------------------------------------
+
+.u-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.u-center {
+    align-items: center;
+}
+.u-between {
+    justify-content: space-between;
+}
+.u-t-center {
+    text-align: center;
+}
+.u-center {
+    justify-content: center;
+}
+.u-fullheight {
+    height: 100vh;
+}
+.u-fullwidth {
+    width: 100vw;
+}
+
+.u-reverse {
+    flex-wrap: wrap-reverse;
+}
+.u-fade {
+    opacity: 0;
+    transition: 700ms ease-in-out;
+}
+
+.u-fade.u-fade--show {
+    opacity: 1;
+}
