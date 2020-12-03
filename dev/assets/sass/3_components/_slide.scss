@@ -1,0 +1,92 @@
+.c-slide {
+    position: relative;
+    height: 100%;
+    .slick-slide > div {
+        height: 100%;
+    }
+    .slick-list {
+        height: 100%;
+        .slick-track {
+            height: 100%;
+        }
+    }
+    &__controller {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        position: absolute;
+        bottom: 30px;
+
+        right: 20px;
+        z-index: 2;
+    }
+    &__item {
+        height: 100%;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__info {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        height: 100vh;
+        z-index: 1;
+        color: white;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        .l-container {
+            padding-right: 40%;
+            @include breakpoint(tab) {
+                padding-right: unset;
+            }
+        }
+    }
+
+    &__label {
+        display: block;
+        position: relative;
+        padding-left: 10px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #ddd;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background-color: $mainColor;
+        }
+    }
+    &__title {
+        font-size: 10rem;
+        font-weight: bold;
+    }
+    &__cat {
+        margin-top: 10px;
+        color: $mainColor;
+        font-size: 1.4rem;
+    }
+    &__description {
+        margin-top: 20px;
+        font-size: 1.6rem;
+        line-height: 1.7;
+        letter-spacing: 0.64px;
+    }
+    &__actions {
+        margin-top: 40px;
+        display: flex;
+        .c-btn {
+            height: 50px;
+            width: 250px;
+            margin-right: 30px;
+            // margin-right: 30px;
+        }
+    }
+}

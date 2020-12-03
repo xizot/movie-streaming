@@ -4,16 +4,58 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#557b97">
+        <meta property="og:site_name" content="SOTN VA NHUNG NGUOI BAN">
+        <link rel="canonical" href="http://popcord-sotn.surge.sh/">
+        <meta http-equiv="Expires" content="30">
+        <meta name="description" content="SOTN CAN ALL">
+        <meta property="og:title" content="POP CORD">
+        <meta property="og:url" content="http://popcord-sotn.surge.sh/">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="data:image/png;base64,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">
+        <meta property="og:description" content="SOTN CAN ALL">
+        <meta property="og:image:secure_url" content="data:image/png;base64,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">
+        
         <title><%= title %></title>
         <link rel="stylesheet" href="assets/css/style.css" />
-      
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./assets/vendor/slick/slick.css">
     </head>
 
     <body>
         <!--▼ Header ▼-->
         <header class="c-header">
             <div class="p-header">
-                <div class="l-container"></div>
+                <div class="p-header__content u-flex u-a-center u-between">
+                    <a href="#" class="p-header__logo">
+                        <img src="https://themezinho.net/digiflex/images/logo.png" alt="">
+                    </a>
+                    <ul class="p-header__cgnav u-flex">
+                        <li>
+                            <a href="#">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#">MOVIES</a>
+                        </li>
+                        <li>
+                            <a href="#">TV SHOWS</a>
+                        </li>
+                        <li>
+                            <a href="#">TIPS</a>
+                        </li>
+                    </ul>
+                    <div class="p-header__actions u-flex u-a-center">
+                        <a href="#" class="p-header__search">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#" class="p-header__account u-flex u-a-center ">
+                            <p>ACCOUNT</p>
+                            <div class="icon-circle">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </header>
         <!--▲ Header ▲-->

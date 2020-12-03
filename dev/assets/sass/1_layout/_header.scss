@@ -1,0 +1,108 @@
+.p-header {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    &__content {
+        padding: 15px 50px;
+        min-height: 70px;
+    }
+    &__logo {
+        width: 60px;
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__cgnav {
+        li {
+            margin: 0 20px;
+            a {
+                font-size: 1.6rem;
+                font-weight: bold;
+                color: white;
+                transition: all 0.6s;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 0%;
+                    height: 2px;
+                    background-color: $mainColor;
+                }
+                &:hover {
+                    color: $mainColor;
+                    &::after {
+                        transition: all 0.6s;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        @include breakpoint(tab) {
+            display: none !important;
+        }
+    }
+    &__actions {
+        p {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: white;
+            transition: all 0.6s;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0%;
+                height: 2px;
+                background-color: $mainColor;
+                transition: all 0.6s;
+            }
+        }
+    }
+    svg {
+        font-size: 1.8rem;
+        color: white;
+        &:hover {
+            color: $mainColor;
+        }
+    }
+    &__search {
+        margin-right: 20px;
+    }
+    .icon-circle {
+        width: 40px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+    }
+    &__account {
+        &:hover {
+            transition: all 0.6s;
+            p {
+                color: $mainColor;
+                &::after {
+                    width: 100%;
+                }
+            }
+            .icon-circle {
+                border-color: $mainColor;
+            }
+            svg {
+                color: $mainColor;
+            }
+        }
+    }
+}

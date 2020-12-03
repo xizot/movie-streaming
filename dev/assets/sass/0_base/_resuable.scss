@@ -1,0 +1,30 @@
+.c-btn {
+    outline: none;
+    font-size: 1.6rem;
+    border-radius: 2px;
+    transition: all 0.6s;
+    font-weight: bold;
+    letter-spacing: 0.78px;
+    border: 1px solid $mainColor;
+    color: $mainColor;
+    background: transparent;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: $mainColor;
+        color: white;
+        border-color: $mainColor;
+    }
+    &--primary {
+        border-color: $mainColor;
+        background-color: $mainColor;
+        color: white;
+        &:hover {
+            background-color: transparent;
+            color: $mainColor;
+            border-color: white;
+        }
+    }
+}

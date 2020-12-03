@@ -81,6 +81,13 @@ function scripts(){
 }
 
 
+//JS
+function vendor(){
+    return gulp
+        .src(devDir+'/assets/vendor/')
+        .pipe(gulp.dest(buildDir+'/assets/vendor'));
+}
+
 
 //Images
 function images(){
@@ -89,7 +96,12 @@ function images(){
         .pipe(imagemin())
         .pipe(gulp.dest(buildDir+ "/assets/img"));
 }
-
+//vendor
+function vendor(){
+    return gulp
+        .src(devDir+'/assets/vendor/**/*')
+        .pipe(gulp.dest(buildDir+ "/assets/vendor"));
+}
 
 //Compile ejs to html
 function ejsTemplate(){
@@ -113,11 +125,12 @@ function watch(){
     gulp.watch(devDir+'/assets/sass/**/*.scss', gulp.parallel(style, ejsTemplate));
     gulp.watch(devDir+'/assets/js/**/*.js', gulp.parallel(scripts, ejsTemplate));
     gulp.watch(devDir+'/assets/img/*', images);
+    gulp.watch(devDir+'/assets/vendor/*', vendor);
     gulp.watch(devDir+'/ejs/**/*.ejs',ejsTemplate);
     gulp.watch(buildDir+'/*.html').on('change', browserSync.reload);
 }
 
-exports.build = gulp.series(clean, gulp.parallel(style, scripts, images, ejsTemplate));
+exports.build = gulp.series(clean, gulp.parallel(style, scripts, images, ejsTemplate,vendor));
 exports.watch = watch;
 
 
