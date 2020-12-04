@@ -5,6 +5,10 @@
     left: 0;
     width: 100%;
     z-index: 999;
+
+    &.is-dark {
+        background-color: #131722;
+    }
     &__content {
         padding: 15px 50px;
         min-height: 70px;

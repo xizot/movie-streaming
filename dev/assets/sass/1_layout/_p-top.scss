@@ -16,7 +16,9 @@
     &2 {
         padding: 100px 0;
         background-color: #1c212e;
-
+        .c-title {
+            margin-top: 5px;
+        }
         &__content {
             margin-top: 60px;
             margin-left: -15px;

@@ -20,6 +20,10 @@
 
         right: 20px;
         z-index: 2;
+        @include breakpoint(tab) {
+            right: unset;
+            left: 0;
+        }
     }
     &__item {
         height: 100%;
@@ -39,6 +43,9 @@
         width: 100%;
         display: flex;
         align-items: flex-end;
+        @include breakpoint(tab) {
+            bottom: 90px;
+        }
         .l-container {
             padding-right: 40%;
             @include breakpoint(tab) {
@@ -67,6 +74,12 @@
     &__title {
         font-size: 10rem;
         font-weight: bold;
+        @include breakpoint(pro) {
+            font-size: 8rem;
+        }
+        @include breakpoint(tab) {
+            font-size: 6rem;
+        }
     }
     &__cat {
         margin-top: 10px;

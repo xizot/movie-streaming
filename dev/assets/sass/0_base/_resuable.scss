@@ -24,7 +24,7 @@
         &:hover {
             background-color: transparent;
             color: $mainColor;
-            border-color: white;
+            border-color: $mainColor;
         }
     }
 }

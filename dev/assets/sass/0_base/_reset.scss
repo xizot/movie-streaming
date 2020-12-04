@@ -29,10 +29,15 @@ main {
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     -webkit-text-size-adjust: 100%;
+}
+main {
+    position: relative;
+    z-index: 1;
 }
 
 body,
