@@ -1,0 +1,169 @@
+.c-menusp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+
+    &__content {
+        background: rgba($color: #000000, $alpha: 0.6);
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        opacity: 0;
+        transition: all 0.6s;
+        @include breakpoint(pro) {
+            opacity: 0;
+        }
+    }
+    &.is-open {
+        pointer-events: all;
+        .c-menusp__content {
+            opacity: 1;
+        }
+        .c-line1 {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+        .c-line2 {
+            transform: rotate(-45deg);
+        }
+        .c-menusp__sidebar {
+            transform: translateX(0) !important;
+        }
+    }
+    &__blank {
+        transition: all 0.6s;
+        width: 65%;
+        @include breakpoint(pro) {
+            width: 50%;
+        }
+        @include breakpoint(pro) {
+            width: 30%;
+        }
+        @include breakpoint(sp) {
+            width: 0%;
+        }
+    }
+    &__sidebar {
+        background-color: #000;
+        transition: all 0.6s;
+        position: relative;
+        width: 0%;
+        padding: 100px 50px;
+        transform: all 0.6s;
+        transform: translateX(100%);
+        @include breakpoint(pro) {
+            width: 50%;
+            padding: 100px 40px;
+        }
+        @include breakpoint(pro) {
+            width: 70%;
+            padding: 100px 35px;
+        }
+        @include breakpoint(sp) {
+            width: 100%;
+            padding: 100px 20px;
+        }
+        a {
+            color: white;
+            font-weight: bold;
+            font-size: 1.6rem;
+            transition: all 0.6s;
+            @include breakpoint(pro) {
+                font-size: 1.4rem;
+            }
+            @include breakpoint(tab) {
+                font-size: 1.2rem;
+            }
+            &:hover {
+                color: $mainColor;
+            }
+        }
+    }
+    &__search {
+        height: 30px;
+        background-color: transparent;
+        border-bottom: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-bottom: 2px;
+        svg {
+            color: white;
+            font-size: 1.5rem;
+        }
+        input {
+            color: white;
+            padding-left: 5px;
+            background-color: transparent;
+        }
+    }
+    &__cgnav {
+        margin-top: 50px;
+        li {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+    &__actions {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        padding: 15px 0;
+    }
+    &__footer {
+        border-top: 1px solid #fff;
+        padding-top: 15px;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.2rem;
+        width: calc(100% - 100px);
+        @include breakpoint(pro) {
+            width: calc(100% - 80px);
+        }
+        @include breakpoint(pro) {
+            width: calc(100% - 70px);
+        }
+        @include breakpoint(sp) {
+            width: calc(100% - 40px);
+        }
+        a {
+            margin-right: 10px;
+            display: block;
+            img {
+                filter: invert(1);
+                width: 20px;
+            }
+        }
+        p {
+            color: white;
+            margin-left: auto;
+        }
+    }
+    &__controller {
+        position: absolute;
+        right: 50px;
+        top: 45px;
+        z-index: 3;
+        display: none;
+        pointer-events: all;
+        @include breakpoint(tab) {
+            display: block;
+        }
+        .c-line {
+            width: 40px;
+            height: 1px;
+            background-color: white;
+            display: block;
+            margin-bottom: 10px;
+            transition: all 0.6s;
+            transform-origin: 50% 50%;
+        }
+    }
+}

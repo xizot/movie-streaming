@@ -71,6 +71,16 @@ $(window).ready(() => {
     //     scrollBar:true,
     //     easingcss3: 'cubic-bezier(.5,.03,0,.99)',
     // }); 
+    $('.js-bars').click(function (e) { 
+        e.preventDefault();
+       
+        
+        $(this).parent().toggleClass('is-open')
+    });
+    $('.js-blank').click(function (e) { 
+        e.preventDefault();
+        $('.c-menusp').removeClass('is-open')
+    });
 
 });
 $(window).on('resize', function() {

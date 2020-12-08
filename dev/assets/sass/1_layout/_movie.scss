@@ -25,7 +25,7 @@
                 font-size: 8rem;
             }
             @include breakpoint(tab) {
-                font-size: 6rem;
+                font-size: 5rem;
             }
         }
         &__cat {
@@ -39,10 +39,16 @@
             line-height: 1.7;
             letter-spacing: 0.64px;
             color: white;
+            @include breakpoint(pro) {
+                font-size: 1.4rem;
+            }
         }
         &__actions {
             .c-btn {
                 margin-top: 30px;
+                @include breakpoint(pro) {
+                    font-size: 1.4rem;
+                }
             }
             .u-flex {
                 margin-top: 30px;
@@ -105,9 +111,14 @@
             }
         }
     }
-    &2 {
+    &3 {
         padding: 100px 0;
         background-color: #131722;
+        .c-item {
+            .gutter {
+                height: 250px;
+            }
+        }
         .c-title {
             margin-top: 5px;
         }

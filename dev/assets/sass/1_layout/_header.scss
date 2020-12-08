@@ -23,6 +23,9 @@
         }
     }
     &__cgnav {
+        @include breakpoint(tab) {
+            display: none !important;
+        }
         li {
             margin: 0 20px;
             a {
@@ -49,11 +52,11 @@
                 }
             }
         }
+    }
+    &__actions {
         @include breakpoint(tab) {
             display: none !important;
         }
-    }
-    &__actions {
         p {
             font-size: 1.6rem;
             font-weight: bold;
@@ -72,15 +75,16 @@
             }
         }
     }
-    svg {
-        font-size: 1.8rem;
-        color: white;
-        &:hover {
-            color: $mainColor;
-        }
-    }
+
     &__search {
         margin-right: 20px;
+        svg {
+            font-size: 1.8rem;
+            color: white;
+            &:hover {
+                color: $mainColor;
+            }
+        }
     }
     .icon-circle {
         width: 40px;
@@ -91,6 +95,13 @@
         align-items: center;
         justify-content: center;
         margin-left: 10px;
+        svg {
+            font-size: 1.8rem;
+            color: white;
+            &:hover {
+                color: $mainColor;
+            }
+        }
     }
     &__account {
         &:hover {
